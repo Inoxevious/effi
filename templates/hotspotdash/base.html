@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Title -->
+    <title>effi-fuels | admin</title>
+
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'assets/img/icons/icon.png' %}" />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="//fonts.googleapis.com/css?family=Open+Sans%3A400%2C300%2C500%2C600%2C700%7CPlayfair+Display%7CRoboto%7CRaleway%7CSpectral%7CRubik"
+    />
+    <!-- CSS Global Compulsory -->
+    <link
+      rel="stylesheet"
+      href="{% static 'unify/assets/vendor/bootstrap/bootstrap.min.css' %}"
+    />
+    <!-- CSS Global Icons -->
+    <link
+      rel="stylesheet"
+      href="{% static 'unify/assets/vendor/icon-awesome/css/font-awesome.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'unify/assets/vendor/icon-line/css/simple-line-icons.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'unify/assets/vendor/icon-etlinefont/style.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'unify/assets/vendor/icon-line-pro/style.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'unify/assets/vendor/icon-hs/style.css' %}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{% static 'unify/unifydash/assets/vendor/hs-admin-icons/hs-admin-icons.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'unify/assets/vendor/animate.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'unify/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'unify/unifydash/assets/vendor/bootstrap-select/css/bootstrap-select.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'unify/unifydash/assets/vendor/chartist-js/chartist.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'unify/unifydash/assets/vendor/chartist-js-tooltip/chartist-plugin-tooltip.css' %}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{% static 'unify/assets/vendor/hamburgers/hamburgers.min.css' %}"
+    />
+
+    <!-- CSS Unify -->
+    <link
+      rel="stylesheet"
+      href="{% static 'unify/unifydash/assets/css/unify-admin.css' %}"
+    />
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="{% static 'unify/assets/css/custom.css' %}" />
+  </head>
+
+  <body>
+    <main>
+      {% include 'hotspotdash/header.html'%}
+      <!-- End Header -->
+      <section class="container-fluid px-0 g-pt-65">
+        <div class="row no-gutters g-pos-rel g-overflow-x-hidden">
+          <!--  -->
+          {% include 'hotspotdash/nav.html'%} {% block content %} {% endblock %}
+          <p></p>
+          {% include 'hotspotdash/footer.html'%}
+        </div>
+      </section>
+    </main>
+
+    <!-- JS Global Compulsory -->
+    <script src="{% static 'unify/unifydash/assets/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'unify/unifydash/assets/vendor/jquery-migrate/jquery-migrate.min.js' %}"></script>
+
+    <script src="{% static 'unify/assets/vendor/popper.js/popper.min.js' %}"></script>
+    <script src="{% static 'unify/assets/vendor/bootstrap/bootstrap.min.js' %}"></script>
+
+    <script src="{% static 'unify/assets/vendor/cookiejs/jquery.cookie.js' %}"></script>
+
+    <script src="{% static 'unify/assets/vendor/appear.js' %}"></script>
+    <script src="{% static 'unify/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+    <script src="{% static 'unify/unifydash/assets/vendor/chartist-js/chartist.min.js' %}"></script>
+    <script src="{% static 'unify/unifydash/assets/vendor/chartist-js-tooltip/chartist-plugin-tooltip.js' %}"></script>
+
+    <!-- JS Unify -->
+    <script src="{% static 'unify/assets/js/hs.core.js' %}"></script>
+    <script src="{% static 'unify/unifydash/assets/js/components/hs.side-nav.js' %}"></script>
+    <script src="{% static 'unify/assets/js/helpers/hs.hamburgers.js' %}"></script>
+    <script src="{% static 'unify/assets/js/components/hs.dropdown.js' %}"></script>
+    <script src="{% static 'unify/assets/js/components/hs.scrollbar.js' %}"></script>
+    <script src="{% static 'unify/unifydash/assets/js/components/hs.area-chart.js' %}"></script>
+    <script src="{% static 'unify/unifydash/assets/js/components/hs.bar-chart.js' %}"></script>
+    <script src="{% static 'unify/unifydash/assets/js/components/hs.pie-chart.js' %}"></script>
+    <script src="{% static 'unify/unifydash/assets/js/components/hs.donut-chart.js' %}"></script>
+
+    <!-- JS Custom -->
+    <script src="{% static 'unify/assets/js/custom.js' %}"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on("ready", function () {
+        // initialization of hamburger
+        $.HSCore.helpers.HSHamburgers.init(".hamburger");
+
+        // initialization of charts
+        $.HSCore.components.HSAreaChart.init(".js-area-chart");
+        $.HSCore.components.HSPieChart.init(".js-pie-chart");
+        $.HSCore.components.HSDonutChart.init(".js-donut-chart");
+        $.HSCore.components.HSBarChart.init(".js-bar-chart");
+
+        // initialization of sidebar navigation component
+        $.HSCore.components.HSSideNav.init(".js-side-nav", {
+          afterOpen: function () {
+            setTimeout(function () {
+              $.HSCore.components.HSAreaChart.init(".js-area-chart");
+              $.HSCore.components.HSPieChart.init(".js-pie-chart");
+              $.HSCore.components.HSDonutChart.init(".js-donut-chart");
+              $.HSCore.components.HSBarChart.init(".js-bar-chart");
+            }, 400);
+          },
+          afterClose: function () {
+            setTimeout(function () {
+              $.HSCore.components.HSAreaChart.init(".js-area-chart");
+              $.HSCore.components.HSPieChart.init(".js-pie-chart");
+              $.HSCore.components.HSDonutChart.init(".js-donut-chart");
+              $.HSCore.components.HSBarChart.init(".js-bar-chart");
+            }, 400);
+          },
+        });
+
+        // initialization of HSDropdown component
+        $.HSCore.components.HSDropdown.init($("[data-dropdown-target]"), {
+          dropdownHideOnScroll: false,
+        });
+
+        // initialization of custom scrollbar
+        $.HSCore.components.HSScrollBar.init($(".js-custom-scroll"));
+      });
+    </script>
+  </body>
+</html>

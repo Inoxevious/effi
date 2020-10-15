@@ -140,8 +140,8 @@ DATABASES = {
         'default': {
             'ENGINE': 'django.contrib.gis.db.backends.postgis', #''django.db.backends.postgresql_psycopg2',  #'django.db.backends.mysql',
             'NAME': 'effi',
-            'USER': 'postgres',
-            'PASSWORD': 'postgres',
+            'USER': 'inno',
+            'PASSWORD': 'inno',
             'HOST': 'localhost',
             'PORT': POSTGRESQL_ADDON_PORT,
             'CONN_MAX_AGE': 15, 

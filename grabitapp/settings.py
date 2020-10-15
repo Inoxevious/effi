@@ -43,20 +43,18 @@ SECRET_KEY = ')c^@^^mf^uc5&8!$zdvf2dlw!@-e52&wnuk^2o@&+2e*xx#8rj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['greats.pythonanywhere.com','127.0.0.1', '104.243.37.216']
+ALLOWED_HOSTS = ['127.0.0.1', '104.243.37.215']
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'account',
-    'easy_maps',
     'mush_store',
     'pages',
     'hotspot',
     'cart',
     'jet',
-    'vote',
     'processor',
     'mapwidgets',
     'corsheaders',
